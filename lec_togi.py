@@ -1,13 +1,7 @@
-from difflib import diff_bytes
-from re import S
 import pandas as pd
 import streamlit as st
 import pydeck as pdk
 import plotly.express as px
-import matplotlib.pyplot as plt
-
-from email.mime import image
-from PIL import Image
 
 st.title('都議会議員調査ダッシュボード')
 st.header('都議会議員調査：2018-2021')
