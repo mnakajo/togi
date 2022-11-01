@@ -7,13 +7,11 @@ st.title('都議会議員調査ダッシュボード')
 st.header('都議会議員調査：2018-2021')
 st.subheader('津田塾大学中條研究室')
 
-df_ts =pd.read_csv('/Users/mnakajo/workspace/lec_togi/csv_data/tsdata.csv')
-
+df_ts =pd.read_csv('./csv_data/tsdata.csv')
 
 show_df = st.checkbox('Show DataFrame')
 if show_df == True:
     st.write(df_ts)
-
 
 fig=px.scatter(df_ts,
                 x='イデオロギー',
@@ -24,6 +22,5 @@ fig=px.scatter(df_ts,
                 animation_frame='調査年')
 
 st.plotly_chart(fig)
-
 
 st.text('出典：津田塾大学　東京都議会議員調査2018-2021（津田塾大学中條研究室）')
