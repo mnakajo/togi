@@ -11,10 +11,8 @@ st.markdown("<hr>",unsafe_allow_html=True)
 from pathlib import Path
 import pandas as pd
 
-BASE_DIR = Path(__file__).parent
-df_ts =pd.read_csv(BASE_DIR/"csv_data"/"tsdata8.csv")
+df_ts =pd.read_csv("csv_data/tsdata8.csv")
 
-#df_ts['id'] = range(len(df_ts))
 fig=px.scatter(df_ts,
                 x='イデオロギー',
                 y='知事評価',
