@@ -8,20 +8,7 @@ st.header('2018-2025')
 st.subheader('津田塾大学中條研究室')
 st.markdown("<hr>",unsafe_allow_html=True)
 
-from pathlib import Path
-import pandas as pd
-
 df_ts =pd.read_csv("csv_data/tsdata8.csv")
-
-fig=px.scatter(df_ts,
-                x='イデオロギー',
-                y='知事評価',
-                range_x=[-1,11],
-                range_y=[-1,11],
-                #color='会派',
-                #animation_group='id',
-                animation_frame='調査年')
-#st.plotly_chart(fig)
 
 df_ideo_counts = (
     df_ts.groupby(['調査年','イデオロギー'])
